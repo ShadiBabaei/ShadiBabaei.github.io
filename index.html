@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WR6RNXN3');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shadi Babaei</title>
+<meta name="description" content="Shadi Babaei — M.S. student in Computer Science at the University of Maine.">
+<!-- Tells search engines (Google, Bing, etc.) not to list this page in results -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow, noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ee;
+    --panel: #fffdf9;
+    --text: #22201c;
+    --muted: #6f6a61;
+    --line: #e7e1d6;
+    --accent: #b5532d;      /* terracotta */
+    --accent-soft: #f6e4da;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161513; --panel:#1e1d1a; --text:#efebe3; --muted:#a59f94; --line:#2f2d29; --accent:#e58a63; --accent-soft:#3a2a22; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .layout { max-width: 1120px; margin: 0 auto; padding: 48px 28px; display: grid; grid-template-columns: 290px 1fr; gap: 56px; }
+
+  /* ---------- Sidebar ---------- */
+  aside { position: sticky; top: 40px; align-self: start; }
+  .photo { width: 100%; aspect-ratio: 4/5; border-radius: 18px; object-fit: cover; background: var(--accent-soft); display: block; border: 1px solid var(--line); }
+  .photo-fallback { width: 100%; aspect-ratio: 4/5; border-radius: 18px; background: var(--accent-soft); display: none; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 72px; color: var(--accent); }
+  aside h1 { font-family: 'Fraunces', serif; font-weight: 650; font-size: 32px; line-height: 1.15; margin-top: 22px; letter-spacing: -0.01em; }
+  .role { color: var(--muted); margin-top: 6px; font-size: 15px; }
+  .cv-btn { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; padding: 11px 16px; border-radius: 10px; background: var(--accent); color: #fff; font-weight: 600; font-size: 15px; }
+  .cv-btn:hover { text-decoration: none; filter: brightness(1.06); }
+  .socials { list-style: none; margin-top: 22px; display: grid; gap: 4px; }
+  .socials a { display: flex; align-items: center; gap: 12px; padding: 7px 10px; border-radius: 8px; color: var(--text); font-size: 15px; }
+  .socials a:hover { background: var(--panel); text-decoration: none; }
+  .socials svg { width: 18px; height: 18px; flex-shrink: 0; color: var(--muted); }
+  .toc { list-style: none; margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .toc a { color: var(--muted); font-size: 14px; }
+  .toc a.active, .toc a:hover { color: var(--accent); text-decoration: none; }
+
+  /* ---------- Content ---------- */
+  main section { padding-bottom: 52px; scroll-margin-top: 30px; }
+  h2 { font-family: 'Fraunces', serif; font-weight: 650; font-size: 26px; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+  h2::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .about p { margin-bottom: 14px; font-size: 17px; }
+  .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .chip { padding: 5px 13px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); font-size: 14px; font-weight: 500; }
+
+  /* Updates timeline */
+  .timeline { list-style: none; position: relative; padding-left: 22px; }
+  .timeline::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 2px; background: var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px; }
+  .timeline li::before { content: ""; position: absolute; left: -22px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--panel); border: 2px solid var(--accent); }
+  .timeline .date { font-size: 13px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--accent); }
+  .timeline li.hidden { display: none; }
+  .more-btn { background: none; border: 1px solid var(--line); color: var(--muted); padding: 6px 14px; border-radius: 8px; font: inherit; font-size: 14px; cursor: pointer; }
+  .more-btn:hover { color: var(--text); border-color: var(--muted); }
+
+  /* Publications */
+  .pub { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px dashed var(--line); }
+  .pub:last-child { border-bottom: none; }
+  .venue { font-size: 12px; font-weight: 600; text-align: center; padding: 6px 4px; border-radius: 8px; background: var(--panel); border: 1px solid var(--line); height: fit-content; color: var(--muted); }
+  .pub .title { font-weight: 600; }
+  .pub .authors { color: var(--muted); font-size: 15px; }
+  .pub .authors b { color: var(--text); }
+  .pub .pdesc { font-size: 15px; margin-top: 6px; color: var(--text); }
+  .pub .plinks { margin-top: 4px; display: flex; gap: 12px; font-size: 14px; font-weight: 500; }
+
+  /* Experience rows */
+  .row { display: grid; grid-template-columns: 130px 1fr; gap: 20px; padding: 14px 0; }
+  .row .when { color: var(--muted); font-size: 14px; padding-top: 2px; }
+  .row h3 { font-size: 16px; font-weight: 600; }
+  .row .org { color: var(--accent); font-size: 15px; }
+  .row p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+  /* Hobbies grid */
+  .hobbies { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+  .hobby { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 18px; transition: transform .15s ease, border-color .15s ease; }
+  .hobby:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .hobby .emoji { font-size: 26px; }
+  .hobby h3 { font-size: 15px; font-weight: 600; margin: 6px 0 4px; }
+  .hobby p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  footer { text-align: center; color: var(--muted); font-size: 13px; padding: 10px 0 40px; }
+
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; gap: 36px; padding-top: 32px; }
+    aside { position: static; text-align: center; }
+    .photo, .photo-fallback { width: 180px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; }
+    .socials { grid-template-columns: repeat(2, 1fr); }
+    .socials a { justify-content: center; }
+    .toc { justify-content: center; }
+    .row { grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR6RNXN3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside>
+    <!-- Add photo.jpeg to your repo -->
+    <img class="photo" src="photo.jpeg" alt="Photo of Shadi Babaei"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="photo-fallback">S</div>
+
+    <h1>Shadi Babaei</h1>
+    <div class="role">M.S. Student in Computer Science<br>University of Maine</div>
+
+    <a class="cv-btn" href="cv.pdf" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+      View My CV
+    </a>
+
+    <ul class="socials">
+      <li><a href="http://www.linkedin.com/in/shadi-babaei-6b739b178/" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.3 18.3V10H5.7v8.3h2.6zM7 8.8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm11.3 9.5v-4.6c0-2.4-1.3-3.6-3.1-3.6-1.4 0-2 .8-2.4 1.3V10h-2.6v8.3h2.6v-4.4c0-1.2.2-2.3 1.7-2.3s1.5 1.4 1.5 2.4v4.3h2.3z"/></svg>LinkedIn</a></li>
+      <li><a href="https://github.com/shawd4586" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>GitHub</a></li>
+      <li><a href="mailto:shadi.babaei@maine.edu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a></li>
+      <li><a href="https://umaine.edu/" target="_blank">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Orono, Maine</a></li>
+    </ul>
+
+    <ul class="toc">
+      <li><a href="#about">About</a></li>
+      <li><a href="#updates">Updates</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#industry">Industry</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#hobbies">Hobbies</a></li>
+    </ul>
+  </aside>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>Hi! I'm Shadi, a master's student in Computer Science at the <a href="https://umaine.edu/" target="_blank">University of Maine</a>, where I work as a research assistant in the <strong>Privacy Engineering, Regulatory Compliance (PERC) Lab</strong> with <a href="https://www.sepidehghanavati.com/" target="_blank">Prof. Sepideh Ghanavati</a>. I study <strong>usable privacy</strong>: how people understand the data practices of the technology around them, from IoT devices to the tracking tools embedded in websites. I'm also interested in <strong>privacy in machine learning</strong> and <strong>explainable AI</strong>.</p>
+      <p>Before graduate school, I worked in industry as a data scientist on financial and fraud data. I earned my B.Sc. in Applied Mathematics, with a minor in Computer Science, from <a href="https://aut.ac.ir/en" target="_blank">Amirkabir University of Technology</a> in Tehran.</p>
+      <div class="interests">
+        <span class="chip">Usable Privacy</span>
+        <span class="chip">Web Tracking</span>
+        <span class="chip">IoT Privacy</span>
+        <span class="chip">Privacy in ML</span>
+        <span class="chip">Explainable AI</span>
+      </div>
+    </section>
+
+    <section id="updates">
+      <h2>Updates</h2>
+      <ul class="timeline">
+        <li><div class="date">Fall 2026</div>Writing a literature survey on membership inference attacks and how they are evaluated.</li>
+        <li><div class="date">2026</div>Served as a sub-reviewer for <strong>NDSS 2027</strong> and <strong>ACM CCS 2026</strong>.</li>
+        <li><div class="date">2026</div>Leading a user study on Google Tag Manager, in preparation for submission to <strong>PETS</strong>.</li>
+        <li><div class="date">Spring 2026</div>Completed a project explaining privacy-behavior classification in Android code with Saliency, LIME, and SHAP.</li>
+        <li class="hidden"><div class="date">2025</div>Served as a sub-reviewer for <strong>ICSE 2026</strong> and <strong>IEEE RE 2025</strong>.</li>
+        <li class="hidden"><div class="date">2025</div>Started my M.S. in Computer Science at the University of Maine and joined the PERC Lab.</li>
+        <li class="hidden"><div class="date">2023 – 2024</div>Worked as a data scientist at Exirpouya and Kifpool in Tehran.</li>
+        <li class="hidden"><div class="date">2022</div>Graduated with a B.Sc. in Applied Mathematics from Amirkabir University of Technology.</li>
+      </ul>
+      <button class="more-btn" id="moreBtn">Show older updates</button>
+    </section>
+
+    <section id="research">
+      <h2>Research</h2>
+      <div class="row">
+        <div class="when">2025 – Present</div>
+        <div>
+          <h3>Graduate Research Assistant</h3>
+          <div class="org">PERC Lab, University of Maine · Advisor: <a href="https://www.sepidehghanavati.com/" target="_blank">Prof. Sepideh Ghanavati</a></div>
+          <p>Conducting user studies on how people perceive the data practices of IoT devices and web tracking tools. Leading a user study of Google Tag Manager, in preparation for submission to PETS.</p>
+        </div>
+      </div>
+
+      <h3 style="margin: 30px 0 4px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Selected Projects</h3>
+      <div class="pub">
+        <div class="venue">FALL<br>2026</div>
+        <div>
+          <div class="title">Membership Inference and the Evaluation Crisis: A Literature Survey</div>
+          <div class="authors">Privacy in Machine Learning · Instructor: Prof. Sepideh Ghanavati</div>
+          <p class="pdesc">Surveys membership inference attacks, from shadow-model constructions to likelihood-ratio methods, and recent critiques showing that many reported results against LLMs reflect differences between member and non-member data rather than true membership. Proposes an evaluation protocol in which attacks must beat a blind, model-free baseline and report the true-positive rate at a low false-positive rate.</p>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="venue">SPR<br>2026</div>
+        <div>
+          <div class="title">Explaining Privacy-Behavior Classification in Android Code using Saliency, LIME, and SHAP</div>
+          <div class="authors">Explainable AI · Instructor: <a href="https://umaine.edu/directory/ums_directory/chaofan-chen/" target="_blank">Prof. Chaofan Chen</a></div>
+          <p class="pdesc">Applied saliency maps, LIME, and SHAP to analyze the predictions of a binary classifier that detects privacy-related behavior in Android code.</p>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="venue">FALL<br>2021</div>
+        <div>
+          <div class="title">Lower–Diagonal–Upper (LDU) Decomposition Implementation in Python</div>
+          <div class="authors">Amirkabir University of Technology · Supervisor: Prof. Erfan Salavati</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="venue">2020<br>–21</div>
+        <div>
+          <div class="title">Handwritten Digit Recognition using Least Squares and SVD</div>
+          <div class="authors">Amirkabir University of Technology · Supervisor: Prof. Fatemeh Shakeri</div>
+        </div>
+      </div>
+      <div class="pub">
+        <div class="venue">FALL<br>2020</div>
+        <div>
+          <div class="title">Solving the Rubik's Cube using Group Theory</div>
+          <div class="authors">Amirkabir University of Technology · Supervisor: Prof. Behzad Najafi Saghezchi</div>
+        </div>
+      </div>
+
+      <h3 style="margin: 30px 0 4px; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em;">Professional Service</h3>
+      <div class="row"><div class="when">2026</div><div><h3>Sub-reviewer, NDSS 2027</h3><p>Network and Distributed System Security Symposium · 2 papers</p></div></div>
+      <div class="row"><div class="when">2026</div><div><h3>Sub-reviewer, ACM CCS 2026 (Round 2)</h3><p>ACM Conference on Computer and Communications Security · 1 paper</p></div></div>
+      <div class="row"><div class="when">2025</div><div><h3>Sub-reviewer, ICSE 2026</h3><p>International Conference on Software Engineering · 1 paper</p></div></div>
+      <div class="row"><div class="when">2025</div><div><h3>Sub-reviewer, IEEE RE 2025</h3><p>IEEE International Requirements Engineering Conference · 1 paper</p></div></div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="row">
+        <div class="when">2025 – Present</div>
+        <div>
+          <h3>M.S. in Computer Science <span style="font-weight:400;color:var(--muted)">(expected Summer 2027)</span></h3>
+          <div class="org">University of Maine, Orono, ME</div>
+          <p>GPA 4.0/4.0 · Advisor: Prof. Sepideh Ghanavati<br>
+          Graduate courses: Privacy in Machine Learning, Algorithms, Machine Learning, Explainable AI, Statistical Foundations, Introduction to Data Science</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2017 – 2022</div>
+        <div>
+          <h3>B.Sc. in Applied Mathematics, Minor in Computer Science</h3>
+          <div class="org">Amirkabir University of Technology (Tehran Polytechnic), Iran</div>
+          <p>Advisor: Prof. Farhad Rahmati<br>
+          Selected courses: Numerical Linear Algebra, Linear Optimization, Design and Analysis of Algorithms, Theory of Computation, Operating Systems, Data Mining, Artificial Intelligence</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="row">
+        <div class="when">Fall 2025</div>
+        <div><h3>Teaching Assistant — Discrete Structures</h3><div class="org">University of Maine</div><p>Assisted the instructor and graded assignments.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Spring 2025</div>
+        <div><h3>Teaching Assistant — Computers and Ethics</h3><div class="org">University of Maine</div><p>Assisted Prof. Greg Nelson and graded assignments.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Spring 2022</div>
+        <div><h3>Teaching Assistant — Linear Algebra</h3><div class="org">Amirkabir University of Technology</div><p>Designed and graded MATLAB assignments; prepared supplementary lecture notes.</p></div>
+      </div>
+      <div class="row">
+        <div class="when">Spring 2022</div>
+        <div><h3>Teaching Assistant — Introduction to Logic and Set Theory</h3><div class="org">Amirkabir University of Technology</div></div>
+      </div>
+    </section>
+
+    <section id="industry">
+      <h2>Industry Experience</h2>
+      <div class="row">
+        <div class="when">Sep – Dec 2024</div>
+        <div>
+          <h3>Data Scientist and Analyst</h3>
+          <div class="org"><a href="https://kifpool.me/" target="_blank">Kifpool</a> (cryptocurrency exchange), Tehran</div>
+          <p>Built fraud and anomaly detection methods on sensitive financial transaction data, developed an RFM (Recency, Frequency, Monetary) model to understand user behavior, and built BI dashboards and a customer service chatbot.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">Dec 2023 – Sep 2024</div>
+        <div>
+          <h3>Data Scientist and BI Specialist</h3>
+          <div class="org"><a href="https://exirpouya.com/" target="_blank">Exirpouya</a>, Tehran</div>
+          <p>Extracted and analyzed fiscal data for banking and industry financial reporting, designed data models to improve data integrity, and independently built a retrieval-augmented generation (RAG) chatbot with Llama 3 embeddings for Persian fiscal data queries.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="when">2020 – 2021</div>
+        <div>
+          <h3>Recommendation System Designer (Volunteer)</h3>
+          <div class="org">Vegitto, Tehran</div>
+          <p>Built a collaborative-filtering recommender in Python with scikit-learn, NumPy, pandas, and Surprise.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills &amp; Honors</h2>
+      <div class="row"><div class="when">Programming</div><div class="interests" style="margin:0">
+        <span class="chip">Python</span><span class="chip">C</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Git</span><span class="chip">Linux</span><span class="chip">Docker</span><span class="chip">LaTeX</span></div></div>
+      <div class="row"><div class="when">Data</div><div class="interests" style="margin:0">
+        <span class="chip">scikit-learn</span><span class="chip">NumPy</span><span class="chip">pandas</span><span class="chip">Power BI</span><span class="chip">SQL Server (SSIS, SSAS, SSRS)</span></div></div>
+      <div class="row"><div class="when">Languages</div><div><p style="margin:0;color:var(--text)">Persian (native) · English (full professional proficiency) · German (A2) · Greek · Arabic</p></div></div>
+      <div class="row"><div class="when">Honors</div><div><p style="margin:0;color:var(--text)">Ranked in the top 1% of 145,000 participants in Iran's National University Entrance Exam (2017).</p></div></div>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies</h2>
+      <div class="hobbies">
+        <div class="hobby"><div class="emoji">📜</div><h3>Poetry &amp; Literature</h3><p>I was active in the Poetry and Literature Center at AUT and was named best secretary of its Central Council in 2019.</p></div>
+        <div class="hobby"><div class="emoji">🧩</div><h3>Math for Fun</h3><p>I once solved the Rubik's Cube with group theory and gave a seminar on box and product topologies.</p></div>
+        <div class="hobby"><div class="emoji">🎨</div><h3>Painting</h3><p>Painting is how I unwind and get creative away from the screen.</p></div>
+        <div class="hobby"><div class="emoji">🎧</div><h3>Music</h3><p>I'm almost always listening to something, whether I'm working, walking, or painting.</p></div>
+        <div class="hobby"><div class="emoji">🏐</div><h3>Volleyball</h3><p>I love playing volleyball. It's my favorite way to stay active and spend time with friends.</p></div>
+        <div class="hobby"><div class="emoji">🗣️</div><h3>Learning Languages</h3><p>Persian is my first language and I work in English. I also study German, Greek, and Arabic.</p></div>
+      </div>
+    </section>
+
+    <footer>© <span id="year"></span> Shadi Babaei · Hosted on GitHub Pages</footer>
+  </main>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Show / hide older updates
+  const btn = document.getElementById('moreBtn');
+  const hidden = document.querySelectorAll('.timeline li.hidden');
+  if (!hidden.length) btn.style.display = 'none';
+  let open = false;
+  btn.addEventListener('click', () => {
+    open = !open;
+    hidden.forEach(li => li.style.display = open ? 'list-item' : 'none');
+    btn.textContent = open ? 'Show fewer updates' : 'Show older updates';
+  });
+
+  // Highlight the current section in the sidebar
+  const links = document.querySelectorAll('.toc a');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section').forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
