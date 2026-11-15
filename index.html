@@ -40,8 +40,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ---------- Sidebar ---------- */
   aside { position: sticky; top: 40px; align-self: start; padding-top: 8px; }
-  /* --photo-x / --photo-y choose which part of the photo stays visible (0% = left/top, 100% = right/bottom) */
-  .photo { --photo-x: 22%; --photo-y: 30%; object-position: var(--photo-x) var(--photo-y); width: 100%; aspect-ratio: 4/5; border-radius: 18px; object-fit: cover; background: var(--accent-soft); display: block; border: 1px solid var(--line); }
+  .photo-wrap { width: 100%; aspect-ratio: 4/5; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); background: var(--accent-soft); }
+  .photo { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; display: block; }
   .photo-fallback { width: 100%; aspect-ratio: 4/5; border-radius: 18px; background: var(--accent-soft); display: none; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 72px; color: var(--accent); }
   aside h1 { font-family: 'Fraunces', serif; font-weight: 650; font-size: 32px; line-height: 1.15; margin-top: 22px; letter-spacing: -0.01em; }
   .role { color: var(--muted); margin-top: 6px; font-size: 15px; }
@@ -103,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   @media (max-width: 860px) {
     .layout { grid-template-columns: 1fr; gap: 36px; padding-top: 32px; }
     aside { position: static; text-align: center; }
-    .photo, .photo-fallback { width: 180px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; }
+    .photo-wrap, .photo-fallback { width: 180px; margin: 0 auto; border-radius: 50%; aspect-ratio: 1; }
     .socials { grid-template-columns: repeat(2, 1fr); }
     .socials a { justify-content: center; }
     .toc { justify-content: center; }
@@ -122,8 +122,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- ================= SIDEBAR ================= -->
   <aside>
     <!-- Add photo.jpeg to your repo -->
-    <img class="photo" src="photo.jpeg" alt="Photo of Shadi Babaei"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="photo-wrap">
+      <img class="photo" src="photo.jpeg" alt="Photo of Shadi Babaei"
+           onerror="this.parentElement.style.display='none'; document.querySelector('.photo-fallback').style.display='flex';">
+    </div>
     <div class="photo-fallback">S</div>
 
     <h1>Shadi Babaei</h1>
